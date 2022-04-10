@@ -1,7 +1,7 @@
 const otherScript = `
     var script = document.createElement('script');
     script.async = true;
-    script.src = "http://localhost:3001/api/other";
+    script.src = '${process.env.NEXT_PUBLIC_TAG_SERVICE_URL}/api/other';
     document.head.appendChild(script);
     script.onload = () => {
         alert("Here we can use variables set by other scripts" + window.otherObject);
